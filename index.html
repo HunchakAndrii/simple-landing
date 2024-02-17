@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple-landing</title>
     <link rel="stylesheet" href="/css/reset-example.css" />
-    <link rel="stylesheet" href="/css/style.css" />
     <link rel="icon" type="image/x-icon" href="/img/Group 69.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <header class="header">
@@ -84,15 +88,16 @@
                   </p>
                 </div>
               </div>
-              <div class="last-comment">
-
-              </div>
+              <div class="last-comment"></div>
             </div>
           </div>
 
           <div class="section-one__image">
             <picture>
-              <source media="(max-width: 800px)" srcset="/img/section-one-small.png">
+              <source
+                media="(max-width: 800px)"
+                srcset="/img/section-one-small.png"
+              />
               <img
                 class="section-one__img"
                 src="/img/section-one.png"
@@ -109,35 +114,83 @@
         <div class="section-two__wrap">
           <div class="section-two__item">
             <div class="section-two__image">
-              <img src="/img/section-two-img1.png" alt="">
+              <img src="/img/section-two-img1.png" alt="" />
             </div>
             <div class="section-two__content">
               <h3 class="section-two__title">24/7 Support</h3>
-              <p class="section-two__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              <p class="section-two__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              </p>
             </div>
           </div>
           <div class="section-two__item">
             <div class="section-two__image">
-              <img src="/img/section-two-img2.png" alt="">
+              <img src="/img/section-two-img2.png" alt="" />
             </div>
             <div class="section-two__content">
               <h3 class="section-two__title">1000+ of reviews</h3>
-              <p class="section-two__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p class="section-two__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
             </div>
           </div>
           <div class="section-two__item">
             <div class="section-two__image">
-              <img src="/img/section-two-img3.png" alt="">
+              <img src="/img/section-two-img3.png" alt="" />
             </div>
             <div class="section-two__content">
               <h3 class="section-two__title">And more!</h3>
-              <p class="section-two__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p class="section-two__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="section-slider">
+      <div class="container">
+        <h2 class="slider__title">Trusted by</h2>
+        <p class="sloder__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, in
+          tristique senectus dui pharetra sit.
+        </p>
+
+        <div class="slider-container"> 
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="/img/slider-image1.svg" alt="Изображение 1" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/img/slider-image2.svg" alt="Изображение 2" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/img/slider-image3.svg" alt="Изображение 3" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/img/slider-image1.svg" alt="Изображение 1" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/img/slider-image2.svg" alt="Изображение 2" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/img/slider-image3.svg" alt="Изображение 3" />
+              </div>
+            </div>
+
+            <!-- If we need navigation buttons -->
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/js/main.js"></script>
   </body>
 </html>
