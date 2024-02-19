@@ -56,12 +56,25 @@ body {
   padding: 0 20px;
 }
 
+.text-p1 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #515151;
+}
+
 /* #region header */
 
 .header {
   /* position: fixed; */
   height: 51px;
   padding-top: 56px;
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding-top: 20px;;
+  }
 }
 
 .header__wrap {
@@ -91,7 +104,7 @@ body {
   margin-right: 32px;
 }
 
-.contact-us__btn {
+.main-btn {
   color: black;
   background-color: #f0b80d;
   padding: 16px 32px 16px 32px;
@@ -100,8 +113,12 @@ body {
   font-weight: bold;
 }
 
-.contact-us__btn:hover {
-  background-color: #ffd24b;
+.main-btn:hover {
+  box-shadow: 0 0 10px 5px #EAC555;
+}
+
+.main-btn:active {
+  background-color: #ecc759;
 }
 
 /* ..........burger..............*/
@@ -198,6 +215,12 @@ body {
   margin-top: 110px;
 }
 
+@media (max-width: 500px) {
+  .section-one {
+    margin-top: 55px;
+  }
+}
+
 .section-one__content {
   display: flex;
   gap: 15px;
@@ -220,6 +243,12 @@ body {
   max-width: 500px;
 }
 
+@media (max-width: 500px) {
+  .section-one__title  {
+    margin-bottom: 40px;
+  }
+}
+
 .section-one__title span {
   color: #5380ea;
   position: relative;
@@ -235,9 +264,6 @@ body {
   border: 3px solid #5380ea;
   border-color: #5380ea transparent transparent transparent;
   border-radius: 100%;
-}
-
-.coment__block {
 }
 
 .comment__item {
@@ -279,10 +305,6 @@ body {
   margin-bottom: 10px;
 }
 
-.comment-text {
-  color: #515151;
-}
-
 .section-one__image {
 }
 
@@ -295,6 +317,12 @@ body {
 
 .section-two {
   margin-top: 110px;
+}
+
+@media (max-width: 500px) {
+  .section-two {
+    margin-top: 55px;
+  }
 }
 
 .section-two__wrap {
@@ -320,6 +348,12 @@ body {
   }
 }
 
+@media (max-width: 500px) {
+  .section-two__wrap {
+    padding: 12px;
+  }
+}
+
 .section-two__item {
   display: flex;
   align-items: center;
@@ -328,11 +362,13 @@ body {
   justify-self: center;
 }
 
+@media (max-width: 500px) {
+  .section-two__item {
+    padding: 16px;
+  }
+}
 .section-two__image {
   min-width: 64px;
-}
-
-.section-two__content {
 }
 
 .section-two__title {
@@ -343,7 +379,6 @@ body {
 }
 
 .section-two__text {
-  color: #515151;
   max-width: 250px;
 }
 
@@ -353,6 +388,12 @@ body {
 
 .section-slider {
   margin-top: 110px;
+}
+
+@media (max-width: 500px) {
+  .section-slider {
+    margin-top: 55px;
+  }
 }
 
 .slider__title {
@@ -377,19 +418,16 @@ body {
   border-radius: 50%;
 }
 
-.sloder__text {
+.slider__text {
   text-align: center;
   max-width: 440px;
   margin: 0 auto;
-  font-size: 16px;
-  font-weight: 500;
-  color: #515151;
-  line-height: 19px;
   margin-top: 20px;
 }
 
 .slider-container {
   position: relative;
+  margin-top: 24px;
 }
 
 .swiper {
@@ -433,6 +471,206 @@ body {
 .swiper-button-next::after {
   content: "";
   background-image: url("/img/slider-next.svg");
+}
+
+/* #endregion */
+
+/* #region form */
+
+.section-form {
+  margin: 110px 0px;
+}
+
+@media (max-width: 500px) {
+  .section-form {
+    margin: 55px 0px;
+  }
+}
+
+.section-form-wrap {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 120px;
+}
+
+@media (max-width: 1000px) {
+  .section-form-wrap {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 900px) {
+  .section-form-wrap {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 900px) {
+  .form__image {
+    order: 2;
+    margin: 0 auto;
+  }
+}
+
+
+
+form {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 48px;
+  max-width: 575px;
+}
+
+@media (max-width: 900px) {
+  form {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 500px) {
+  form {
+    padding: 25px;
+  }
+}
+
+.form__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 500px) {
+  .form__title {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+}
+
+.form__text {
+  margin-bottom: 50px;
+}
+
+@media (max-width: 500px) {
+  .form__text {
+    margin-bottom: 25px;
+  }
+}
+
+
+.form__sub-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 420px) {
+  .form__sub-title  {
+    margin-bottom: 7px;
+  }
+}
+
+
+input {
+  width: 100%;
+  height: 50px;
+  background-color: #f9faff;
+  border: 1px solid #dee6ff;
+  padding: 16px;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 420px) {
+  input {
+    margin-bottom: 15px;
+  }
+}
+
+
+/* почему не работает :not(:last-child) */
+
+input::placeholder {
+  color: #aaaaaa;
+}
+
+label:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.submit-btn {
+  border-radius: 40px;
+  padding: 16px 32px;
+  background-color: #5380ea;
+  color: white;
+  font-weight: 700;
+  max-width: 200px;
+  width: 100%; /* че за дичь) */
+}
+
+.submit-btn:active {
+  background-color: #7090da;
+}
+
+/* #endregion */
+
+/* #region footer */
+
+.footer {
+  margin-bottom: 65px;
+}
+
+@media (max-width: 500px) {
+  .footer {
+    margin-bottom: 35px;
+  }
+}
+
+.footer__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  border-top: 1px solid #9ca0ff;
+  padding-top: 32px;
+}
+
+@media (max-width: 600px) {
+  .footer__wrap {
+    display: none;
+  }
+}
+
+.footer-mobile {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 32px;
+  border-top: 1px solid #9ca0ff;
+}
+
+@media (min-width: 600px) {
+  .footer-mobile {
+    display: none;
+  }
+}
+
+.column1 {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  gap: 30px;
+}
+
+.column2 > .nav-footer-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  gap: 25px;
 }
 
 /* #endregion */

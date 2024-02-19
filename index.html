@@ -21,7 +21,7 @@
             <a href="/" class="nav__link">About us</a>
             <a href="/" class="nav__link">Products</a>
             <a href="/" class="nav__link">Careers</a>
-            <button class="contact-us__btn">Contact us</button>
+            <button class="main-btn contact-us-btn">Contact us</button>
           </nav>
 
           <button class="burger">
@@ -118,7 +118,7 @@
             </div>
             <div class="section-two__content">
               <h3 class="section-two__title">24/7 Support</h3>
-              <p class="section-two__text">
+              <p class="section-two__text text-p1">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit
               </p>
             </div>
@@ -129,7 +129,7 @@
             </div>
             <div class="section-two__content">
               <h3 class="section-two__title">1000+ of reviews</h3>
-              <p class="section-two__text">
+              <p class="section-two__text text-p1">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
             </div>
@@ -140,7 +140,7 @@
             </div>
             <div class="section-two__content">
               <h3 class="section-two__title">And more!</h3>
-              <p class="section-two__text">
+              <p class="section-two__text text-p1">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
             </div>
@@ -152,7 +152,7 @@
     <section class="section-slider">
       <div class="container">
         <h2 class="slider__title">Trusted by</h2>
-        <p class="sloder__text">
+        <p class="slider__text text-p1">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, in
           tristique senectus dui pharetra sit.
         </p>
@@ -189,6 +189,65 @@
         </div>
       </div>
     </section>
+
+    <section class="section-form">
+      <div class="container">
+        <div class="section-form-wrap">
+          <div class="form__image">
+            <picture>
+              <source media="(max-width: 800px )" srcset="/img/form-img-small.png">
+              <img class="form__img" src="/img/form-img.png" alt="form-img">
+            </picture>
+          </div>
+
+          <form action="/" method="POST">
+            <h2 class="form__title">Register interest</h2>
+            <p class="form__text text-p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, in tristique senectus dui pharetra sit.</p>
+
+            <label for="name">
+              <p class="form__sub-title">Name</p>
+              <input class="input" type="text" name="name" autocomplete="off" id="name" required placeholder="Enter your name">
+            </label>
+            <label for="company">
+              <p class="form__sub-title">Company</p>
+              <input class="input" type="text" name="company" id="company" placeholder="Enter your company name">
+            </label>
+            <label for="email">
+              <p class="form__sub-title">Enter your adress</p>
+              <input class="input" type="email" name="email" id="email" placeholder="Enter your adress">
+            </label>
+            <button class="submit-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrap">
+          <a href="/" id="go-top"><img src="/img/Group 69.png" alt="logo" /></a>
+          <nav class="nav">
+            <a href="/" class="nav__link">About us</a>
+            <a href="/" class="nav__link">Products</a>
+            <a href="/" class="nav__link">Careers</a>
+            <button class="main-btn contact-us__btn">Contact us</button>
+          </nav>
+        </div>
+        <div class="footer-mobile">
+          <div class="column1">
+            <a href="/" id="go-top"><img src="/img/Group 69.png" alt="logo" /></a>
+            <button class="main-btn contact-us__btn">Contact us</button>
+          </div>
+          <div class="column2">
+            <nav class="nav-footer-mobile">
+              <a href="/" class="nav__link">About us</a>
+              <a href="/" class="nav__link">Products</a>
+              <a href="/" class="nav__link">Careers</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/js/main.js"></script>
