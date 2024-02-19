@@ -1,5 +1,6 @@
 const burger = document.querySelector(".burger");
 const mobileMenu = document.querySelector(".mobile-menu");
+const overlay = document.querySelector(".dark-background");
 
 if (burger) {
   burger.addEventListener("click", (e) => {
@@ -7,6 +8,7 @@ if (burger) {
 
     burger.classList.toggle("active");
     mobileMenu.classList.toggle("active");
+    overlay.classList.toggle("active");
 
     if (document.body.classList.contains("body-overlay")) {
       document.body.classList.toggle("body-overlay");

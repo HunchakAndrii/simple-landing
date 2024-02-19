@@ -38,16 +38,31 @@ body {
   min-height: 100vh;
   background-color: #ebf0ff;
   background-image: radial-gradient(#ffdf7c 0%, transparent 50%),
-    radial-gradient(#ffdf7c 0%, transparent 50%);
-  background-position: 58% 80px, -80px 400px;
+    radial-gradient(#ffdf7c 0%, transparent 50%),
+    radial-gradient(circle, rgba(248, 228, 169, 0.6) 0%, transparent 50%),
+    radial-gradient(circle, rgba(211, 102, 125, 0.4) 0%, transparent 50%);
+  background-position: 58% 80px, -80px 400px, 1100px 1250px, 800px 300px;
   background-repeat: no-repeat;
-  background-size: 500px 500px, 635px 635px;
+  background-size: 500px 500px, 635px 635px, 350px 350px, 300px 300px;
 }
 
 .body-overlay {
   overflow: hidden;
-  opacity: 0.4;
-  pointer-events: none;
+}
+
+.dark-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.dark-background.active {
+  display: block;
 }
 
 .container {
@@ -73,7 +88,7 @@ body {
 
 @media (max-width: 500px) {
   .header {
-    padding-top: 20px;;
+    padding-top: 20px;
   }
 }
 
@@ -114,7 +129,7 @@ body {
 }
 
 .main-btn:hover {
-  box-shadow: 0 0 10px 5px #EAC555;
+  box-shadow: 0 0 10px 5px #eac555;
 }
 
 .main-btn:active {
@@ -185,21 +200,39 @@ body {
   /* height: 100vh; */
   border: thick double #e98ebb;
   border-radius: 30px;
-  padding: 50px 30px 30px 30px;
+  padding: 50px 50px 30px;
   background-color: #dce4fc;
   transition: 0.3s all ease;
+  animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    border-color: rgba(255, 0, 0, 0.5); /* Начальный цвет обводки */
+  }
+  100% {
+    border-color: rgba(0, 0, 255, 0.5); /* Конечный цвет обводки */
+  }
 }
 
 .mobile-menu.active {
-  right: 3%;
-  z-index: 5;
+  right: 1%;
+  top: 45px;
+  z-index: 10;
   pointer-events: auto;
+}
+
+@media (max-width: 500px) {
+  .mobile-menu.active {
+    right: 1%;
+    top: 10px;
+  }
 }
 
 .mobile-menu nav {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
   text-align: center;
 }
 
@@ -244,7 +277,7 @@ body {
 }
 
 @media (max-width: 500px) {
-  .section-one__title  {
+  .section-one__title {
     margin-bottom: 40px;
   }
 }
@@ -516,8 +549,6 @@ body {
   }
 }
 
-
-
 form {
   background-color: #fff;
   border-radius: 10px;
@@ -561,7 +592,6 @@ form {
   }
 }
 
-
 .form__sub-title {
   font-weight: 500;
   font-size: 16px;
@@ -570,11 +600,10 @@ form {
 }
 
 @media (max-width: 420px) {
-  .form__sub-title  {
+  .form__sub-title {
     margin-bottom: 7px;
   }
 }
-
 
 input {
   width: 100%;
@@ -591,7 +620,6 @@ input {
     margin-bottom: 15px;
   }
 }
-
 
 /* почему не работает :not(:last-child) */
 
@@ -631,13 +659,36 @@ label:not(:last-child) {
   }
 }
 
+.animation-border {
+  width: 100%;
+  height: 3px;
+  background-image: linear-gradient(90deg, #f1c40f, #3498db, #f1c40f);
+  animation: moveGradient 4s linear infinite;
+  transition: all 0.3s ease;
+  background-size: 200% 100%;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .animation-border {
+    height: 2px;
+  }
+}
+
 .footer__wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  border-top: 1px solid #9ca0ff;
-  padding-top: 32px;
+  padding-top: 50px;
 }
 
 @media (max-width: 600px) {
@@ -650,7 +701,6 @@ label:not(:last-child) {
   display: flex;
   justify-content: space-around;
   padding-top: 32px;
-  border-top: 1px solid #9ca0ff;
 }
 
 @media (min-width: 600px) {
@@ -662,14 +712,14 @@ label:not(:last-child) {
 .column1 {
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   gap: 30px;
 }
 
 .column2 > .nav-footer-mobile {
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   gap: 25px;
 }
 
